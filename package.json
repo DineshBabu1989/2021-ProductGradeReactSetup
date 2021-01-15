@@ -1,0 +1,22 @@
+{
+  "name": "002reactprojectsetup",
+  "version": "1.0.0",
+  "description": "\"A react project set up\"",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "\"webpack",
+    "react",
+    "react-dom",
+    "babel\""
+  ],
+  "author": "Dinesh Babu <emailerdinesh@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
