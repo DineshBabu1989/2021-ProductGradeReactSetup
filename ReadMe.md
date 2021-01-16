@@ -38,3 +38,9 @@ understanding all the internals
     using 2 plugins 
     - html-webpack-plugin
     - clean-webpack-plugin
+ ## Step:5 Configuring webpack for development
+    We need to further configure webpack to use webpack-dev-server for helping us in development,
+    Some additional configuration to track errors during the development phase using inline-source-map.
+    Now in the scripts
+      "watch": "webpack --watch", // doesn't serve the file on dev server, but rebuilds the build on changes
+      "start": "webpack serve --open" // doesn't create a build, but it serves a inmemory build file
