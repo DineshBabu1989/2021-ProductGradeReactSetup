@@ -1,11 +1,21 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js', // it says where is the main file of the project
-  output: {
-    filename: 'bundle.js', // what will be the name of the resulting bundle
-    path: path.resolve(__dirname, 'dist'), // which directory holds this main.js file
+  entry: {
+    index: './src/index.js'
   },
+  output: {
+    filename: '[name].bundle.js', // dynamic naming of bundles incase if we use muliple bundles
+    path: path.resolve(__dirname, 'dist'),
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
   module: { 
     // this is for managing your assests
     rules: [

@@ -31,3 +31,10 @@ understanding all the internals
     to select the needed fonts, so I added the icon fonts to the project in a similar way like the one that I
     followed for adding the roboto font. Now lets remove the Image which has been increasing the 
     bundle size :), Now with around 35 icons added and image removed bundel size is around 12kb.
+ ## Step:4 Adding dynamic bundle name generation for multiple bundles
+    Add configuration to create multiple bundles, dynamic bundle naming and clean up of previous 
+    build assests plus generating a new index.html dynamically, everytime when the 'npm run build' command
+    is ran.
+    using 2 plugins 
+    - html-webpack-plugin
+    - clean-webpack-plugin
