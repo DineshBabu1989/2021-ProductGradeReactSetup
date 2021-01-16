@@ -3,17 +3,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: {
     index: './src/index.js'
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist', // shows dev server where to serve from
   },
   output: {
     filename: '[name].bundle.js', // dynamic naming of bundles incase if we use muliple bundles
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }), 
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'Development',
     }),
   ],
   module: { 
