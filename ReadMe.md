@@ -44,3 +44,17 @@ understanding all the internals
     Now in the scripts
       "watch": "webpack --watch", // doesn't serve the file on dev server, but rebuilds the build on changes
       "start": "webpack serve --open" // doesn't create a build, but it serves a inmemory build file
+ ## Step:6 Adding and configuring Babel
+    We need to add babel to transform ES6 to ES5, ie: convert what we write to what the browser can understand.
+    @babel/preset-env complies a list of plugins based on the configuration we write on babel.config.js.
+    We downloded the following plugins
+    - npm install --save-dev babel-loader @babel/core
+    - npm install @babel/preset-env --save-dev
+    now with babel loading all the needed polyfills the bundle size went to 12kb to 98Kb
+
+
+  ## References:
+     - https://webpack.js.org/guides/
+     - https://babeljs.io/setup#installation
+     - https://gs.statcounter.com/
+     - https://www.valentinog.com/blog/webpack/

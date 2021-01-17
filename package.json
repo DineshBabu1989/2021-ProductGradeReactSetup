@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "\"A react project set up\"",
   "private": true,
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch", 
+    "watch": "webpack --watch",
     "start": "webpack serve --open"
   },
   "keywords": [
@@ -18,6 +19,9 @@
   "author": "Dinesh Babu <emailerdinesh@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
