@@ -51,10 +51,24 @@ understanding all the internals
     - npm install --save-dev babel-loader @babel/core
     - npm install @babel/preset-env --save-dev
     now with babel loading all the needed polyfills the bundle size went to 12kb to 98Kb
-
-
+ ## Step:7 Adding react to the project
+    we will be needing React for writting components, React DOM for the virtual DOM,
+    Also we need to configure html-webpack-plugin to use the public/index.html file from the
+    src directory as a template. Than we will needing @babel/preset-react to compile react, JSX etc.
+    - https://babeljs.io/docs/en/babel-preset-react#docsNav
+    Now after adding react and react-dom the bundle size went from 98kb to 2700kb
+ ## Upcoming
+    - Setting up autoprefixers for css
+    - Setting up SASS
+    - Separating DEV and PROD configuration in webpack
+    - Adding HMR
+    - Adding support for PWA
+ ## Ongoing Investigations
+    - Why 2700kb bundle size, is preact with 3kb bundle size a suitable alternative to react
+    - Which is better CSS in JS or SASS
   ## References:
      - https://webpack.js.org/guides/
      - https://babeljs.io/setup#installation
+     - https://babeljs.io/docs/en/babel-preset-react#docsNav
      - https://gs.statcounter.com/
      - https://www.valentinog.com/blog/webpack/

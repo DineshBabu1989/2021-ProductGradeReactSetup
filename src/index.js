@@ -1,10 +1,10 @@
 import './style.css';
-const component = () => {
-  const element = document.createElement('div');
-  element.innerHTML = 'Hello webpack';
-  element.classList.add('hello');
-  element.classList.add('icon-rain');
-  return element;
-};
+import React, { useState } from "react";
+import { render } from "react-dom";
 
-document.body.appendChild(component());
+function App() {
+    const [state, setState] = useState("CLICK ME I AM A REACT COMPONENT");
+    return <button className = "hello" onClick={() => setState("CLICKED - Reactified")}>{state}</button>;
+}
+
+render(<App />, document.getElementById("root"));
